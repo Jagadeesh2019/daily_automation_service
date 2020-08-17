@@ -14,9 +14,9 @@ app.use(bodyparser.json()); // Whenever any route is hit, this middleware is tri
 
 app.use("/posts", postsRoute);
 
-// app.get("/", (req, res) => {
-//   res.send("This is root");
-// });
+app.get("/", (req, res) => {
+  res.send("This is root");
+});
 
 // connect to DB
 mongoose.connect(
