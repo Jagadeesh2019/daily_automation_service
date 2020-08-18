@@ -1,11 +1,11 @@
 const express = require("express");
-const Post = require("../models/Post");
-
 const router = express.Router();
+//Import Models
+const Post = require("../models/Post");
 
 router.get("/", async (req, res) => {
   try {
-    const posts = await Post.find();
+    const posts = await Post.find({});
     res.json(posts);
   } catch (error) {
     res.json({ message: error });
